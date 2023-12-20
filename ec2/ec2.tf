@@ -77,8 +77,8 @@ resource "aws_instance" "web_server" {
   tags                   = merge(var.tags, { Name = join("", [var.name, "-", "webserver"]) }, { Environment = var.name })
 
   # best practices as per checkov scanner
-  monitoring    = true
-  ebs_optimized = true
+  #monitoring    = true
+  #ebs_optimized = true
    root_block_device {
      encrypted = true
    }
